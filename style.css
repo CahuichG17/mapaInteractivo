@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+input {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+button {
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007aff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+button:hover {
+    background-color: #005bb5;
+}
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+}
+.canvas-container {
+    text-align: center;
+    margin: 30px 0;
+}
+canvas {
+    border: 1px solid #ddd;
+    cursor: crosshair;
+    background: #f8f8f8;
+    max-width: 100%;
+    height: auto;
+}
+#info {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 500;
+}

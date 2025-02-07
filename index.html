@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Mapa Interactivo</h2>
+
+        <div class="description" style="text-align: center; margin-bottom: 15px; font-size: 16px;">
+            Añade coordenadas para asignar el mapa a tus necesidades.
+        </div>
+        <div class="card">
+            <div class="inputs">
+            <div>
+                <label>Latitud Mínima:</label>
+                <input type="number" id="lat_min" step="0.01" value="17">
+            </div>
+            <div>
+                <label>Latitud Máxima:</label>
+                <input type="number" id="lat_max" step="0.01" value="21">
+            </div>
+            <div>
+                <label>Longitud Mínima:</label>
+                <input type="number" id="lon_min" step="0.01" value="-74.5">
+            </div>
+            <div>
+                <label>Longitud Máxima:</label>
+                <input type="number" id="lon_max" step="0.01" value="-67">
+            </div>
+            </div>
+            <div style="text-align: center;">
+            <button onclick="setCoordinates()">Construir Mapa</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="inputs">
+                <div>
+                    <label>Latitud Marcador (17° a 21°):</label>
+                    <input type="number" id="marker_lat" step="0.01" min="17" max="21">
+                </div>
+                <div>
+                    <label>Longitud Marcador (-74.5° a -67°):</label>
+                    <input type="number" id="marker_lon" step="0.01" min="-74.5" max="-67">
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button onclick="placeMarker()">Marcar en el mapa</button>
+                <button onclick="clearMarkers()">Limpiar Coordenadas</button>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <h3 style="text-align: center; margin-bottom: 10px;">Añade una imagen para insertarla en el mapa</h3>
+            <div style="text-align: center; margin-bottom: 10px;">
+            <input type="file" id="fileInput" accept="image/*" style="max-width: 300px; width: 100%;">
+            </div>
+            <div style="display: flex; justify-content: center; gap: 10px;">
+            <button onclick="toggleImageEdit()" style="flex: 1; max-width: 150px;">Editar Imagen</button>
+            <button onclick="resizeImage('increase')" style="flex: 1; max-width: 150px;">Aumentar Tamaño Imagen</button>
+            <button onclick="resizeImage('decrease')" style="flex: 1; max-width: 150px;">Reducir Tamaño Imagen</button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="mapa" width="800" height="500"></canvas>
+        </div>
+        <div id="info">Mueve el mouse sobre el mapa para ver las coordenadas</div>
+    </div>
+</body>
+</html>
